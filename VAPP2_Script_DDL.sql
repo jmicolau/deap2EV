@@ -1,6 +1,30 @@
 CREATE SCHEMA IF NOT EXISTS deap ;
 USE deap ;
 
+CREATE TABLE IF NOT EXISTS alumnos (
+  expediente VARCHAR(15) NOT NULL,
+  nombre VARCHAR(70) NOT NULL,
+  curso INT DEFAULT NULL,
+  PRIMARY KEY (expediente));
+  
+Insert into alumnos (expediente,nombre,curso) 
+values ('exp1','Alumno 1','1')
+,('exp2','Alumno 2','2')
+,('exp3','Alumno 3','1')
+,('exp4','Alumno 4','2')
+,('exp5','Alumno 5','1')
+,('exp6','Alumno 6','2')
+,('exp7','Alumno 7','1')
+,('exp8','Alumno 8','1')
+,('exp9','Alumno 9','2')
+,('exp10','Alumno 10','1')
+,('exp11','Alumno 11','2')
+,('exp12','Alumno 12','2')
+,('exp13','Alumno 13','2')
+,('exp14','Alumno 14','1')
+,('exp15','Alumno 15','1')
+;
+
 CREATE TABLE IF NOT EXISTS PRODUCTOS (
   CODIGOPRODUCTO VARCHAR(15) NOT NULL,
   NOMBRE VARCHAR(70) NOT NULL,
@@ -290,23 +314,3 @@ Insert into PRODUCTOS (CODIGOPRODUCTO,NOMBRE,GAMA,DIMENSIONES,PROVEEDOR,CANTIDAD
 Insert into PRODUCTOS (CODIGOPRODUCTO,NOMBRE,GAMA,DIMENSIONES,PROVEEDOR,CANTIDADENSTOCK,PRECIOVENTA,PRECIOPROVEEDOR) values ('OR-251','Zamia Furfuracaea','Ornamentales','90 - 110','Viveros EL OASIS',15,168,134);
 Insert into PRODUCTOS (CODIGOPRODUCTO,NOMBRE,GAMA,DIMENSIONES,PROVEEDOR,CANTIDADENSTOCK,PRECIOVENTA,PRECIOPROVEEDOR) values ('OR-99','Mimosa DEALBATA Gaulois Astier  ','Ornamentales','200-225','Viveros EL OASIS',100,14,11);
 
-CREATE TABLE IF NOT EXISTS alumnos (
-  expediente VARCHAR(15) NOT NULL,
-  nombre VARCHAR(70) NOT NULL,
-  curso INT DEFAULT NULL,
-  PRIMARY KEY (expediente));
-  
-Insert into alumnos (expediente,nombre,curso) 
-values ('exp1','Alumno 1','1')
-,('exp2','Alumno 2','2')
-,('exp3','Alumno 3','1')
-,('exp4','Alumno 4','2')
-,('exp5','Alumno 5','1')
-,('exp6','Alumno 6','2')
-,('exp7','Alumno 7','1')
-,('exp8','Alumno 8','1')
-,('exp9','Alumno 9','2')
-,('exp10','Alumno 10','1')
-,('exp11','Alumno 10','1')
-,('exp12','Alumno 10','1')
-;
